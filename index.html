@@ -82,7 +82,7 @@
                     </div>
                     <div class="menu__links">
                         <ul class="menu__list">
-                            <li class="menu__item">
+                            <li id="menu" class="menu__item">
                                 СОБЫТИЯ
                                 <svg
                                     width="10"
@@ -97,6 +97,13 @@
                                         d="M7.5873 0.671267C8.01134 0.289662 8.65503 0.289662 9.07907 0.671267C9.57125 1.11419 9.57128 1.88591 9.07914 2.32887L5.00045 6C4.11721 5.2056 4.10216 3.80761 4.98518 3.01297L7.5873 0.671267Z"
                                         fill="#002122" />
                                 </svg>
+
+                                <ul class="menu__sublist">
+                                    <li>Афиша</li>
+                                    <li>Афиша</li>
+                                    <li>Афиша</li>
+                                    <li>Афиша</li>
+                                </ul>
                             </li>
                             <li class="menu__item">
                                 О НАС
@@ -410,6 +417,17 @@
 
         <script type="module">
             import Swiper from "swiper";
+
+            const menu = document.getElementById("menu");
+            // Добавляем класс при наведении
+            menu.addEventListener("mouseover", () => {
+                menu.classList.add("active");
+            });
+
+            // Убираем класс, когда мышь уходит
+            menu.addEventListener("mouseout", () => {
+                menu.classList.remove("active");
+            });
 
             function showBtn() {
                 const menuBtn = document.getElementById("menu-btn");

@@ -37,6 +37,7 @@
         color: #000;
         background-color: white;
     }
+
     background-color: #f74435;
 }
 .burger {
@@ -155,7 +156,8 @@
 
         padding: 20px 15px;
 
-        &.active {
+        &.active:hover {
+            color: white;
             cursor: pointer;
             background-color: #f74435;
         }
@@ -194,6 +196,24 @@
         }
         @media (max-width: 767px) {
             height: 43px;
+        }
+    }
+    &__sublist {
+        display: none;
+    }
+    .menu__item.active {
+        .menu__sublist {
+            display: flex;
+
+            z-index: 2;
+            flex-direction: column;
+            gap: 5px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: black;
+            width: 100%;
+            padding: 11px 15px;
         }
     }
 }
