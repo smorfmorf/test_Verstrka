@@ -389,13 +389,16 @@ slider-thumbGallery {
         @media (min-width: 768px) and (max-width: 1023px) {
             margin-bottom: 25px;
         }
-        //!
+
         @media (max-width: 767px) {
             margin-bottom: 20px;
         }
     }
     &__phone {
-        order: 1;
+        @media (max-width: 767px) {
+            order: 1;
+        }
+
         display: flex;
         align-items: center;
         gap: 8px;
