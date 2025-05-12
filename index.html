@@ -419,6 +419,7 @@
 
         <script type="module">
             import Swiper from "swiper";
+
             const isMobile = window.innerWidth <= 766;
             const isTablet = window.innerWidth > 766 && window.innerWidth <= 992;
             const desktop = window.innerWidth > 992;
@@ -487,6 +488,7 @@
                 slidesPerView: isTablet ? 3 : isMobile ? 1 : 4,
                 spaceBetween: 20,
                 loop: false,
+
                 pagination: {
                     el: ".slider-track",
                     type: "progressbar",
