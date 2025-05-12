@@ -254,12 +254,12 @@
         width: 488px;
         margin-top: 56px;
         padding-left: 48px;
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             width: 355px;
             margin-top: 43px;
             padding-left: 40px;
         }
-        @media (max-width: 767px) {
+        @media (max-width: 500px) {
             padding-left: 0px;
         }
     }
