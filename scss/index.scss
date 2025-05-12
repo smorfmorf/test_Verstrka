@@ -467,8 +467,6 @@ slider-thumbGallery {
         flex-direction: column;
         justify-content: center;
         height: 100%;
-        max-height: 400px; // выбери высоту под свой дизайн
-        overflow: hidden;
 
         &--absolute {
             position: absolute;
