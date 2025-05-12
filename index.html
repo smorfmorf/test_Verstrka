@@ -506,13 +506,6 @@
                 slidesPerView: isTablet ? 3 : isMobile ? 1 : 4,
                 spaceBetween: 20,
                 loop: false,
-                pagination: {
-                    el: ".slider-trackNews",
-                    type: "progressbar",
-                },
-            });
-            swiperNews.on("slideChange", function () {
-                updateSliderThumb(thumbNews, swiperNews);
             });
 
             const swiperGallery = new Swiper(".gallery-swiper", {
@@ -523,13 +516,6 @@
                 },
                 spaceBetween: 20,
                 loop: false,
-                pagination: {
-                    el: ".slider-trackGallery",
-                    type: "progressbar",
-                },
-            });
-            swiperNews.on("slideChange", function () {
-                updateSliderThumb(thumbGallery, swiperGallery);
             });
 
             // Функция для обновления позиции ползунка
@@ -542,7 +528,6 @@
             }
             // Инициализация ползунка
             updateSliderThumb(thumb, swiper);
-            updateSliderThumb(thumbNews, swiperNews);
 
             window.addEventListener("resize", function () {
                 const newIsMobile = window.innerWidth <= 766;
