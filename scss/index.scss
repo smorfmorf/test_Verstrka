@@ -254,10 +254,13 @@
         width: 488px;
         margin-top: 56px;
         padding-left: 48px;
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             width: 355px;
             margin-top: 43px;
             padding-left: 40px;
+        }
+        @media (max-width: 767px) {
+            padding-left: 0px;
         }
     }
 
@@ -280,13 +283,14 @@
         font-size: 36px;
         color: #000;
         margin-bottom: 20px;
-        text-align: center;
         @media (max-width: 767px) {
             font-size: 30px;
         }
         @media (max-width: 400px) {
             font-size: 24px;
         }
+
+        font-size: 36px;
     }
 
     &__adress {
