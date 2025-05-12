@@ -419,6 +419,17 @@
 
         <script type="module">
             import Swiper from "swiper";
+            const isMobile = window.innerWidth <= 766;
+            const isTablet = window.innerWidth > 766 && window.innerWidth <= 992;
+            const desktop = window.innerWidth > 992;
+            const thumb = document.querySelector(".slider-thumb");
+            const track = document.querySelector(".slider-track");
+            const trackNews = document.querySelector(".slider-trackNews");
+            const thumbNews = document.querySelector(".slider-thumbNews");
+            const menuBtn = document.getElementById("menu-btn");
+            const menuBtn2 = document.getElementById("menu-btn2");
+            const swiperBlack = document.getElementById("swiperBlack");
+            const newsBlock = document.getElementById("newsBlock");
 
             const menu = document.getElementById("menu");
             // Добавляем класс при наведении
@@ -432,11 +443,6 @@
             });
 
             function showBtn() {
-                const menuBtn = document.getElementById("menu-btn");
-                const menuBtn2 = document.getElementById("menu-btn2");
-                const swiperBlack = document.getElementById("swiperBlack");
-                const newsBlock = document.getElementById("newsBlock");
-
                 // Функция для проверки мобильного устройства
                 function checkIsMobile() {
                     if (window.innerWidth <= 766) {
@@ -476,17 +482,6 @@
                 });
             }
             showBtn();
-
-            const isMobile = window.innerWidth <= 766;
-            const isTablet = window.innerWidth > 766 && window.innerWidth <= 992;
-            const desktop = window.innerWidth > 992;
-            console.log("desktop: ", desktop);
-
-            const thumb = document.querySelector(".slider-thumb");
-            const track = document.querySelector(".slider-track");
-
-            const trackNews = document.querySelector(".slider-trackNews");
-            const thumbNews = document.querySelector(".slider-thumbNews");
 
             const swiper = new Swiper(".afisha-swiper", {
                 slidesPerView: isTablet ? 3 : isMobile ? 1 : 4,
