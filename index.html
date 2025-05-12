@@ -517,8 +517,6 @@
                 const progress = (currentSlide / (totalSlides - 1)) * 100;
                 target.style.left = `calc(${progress}% - 10px)`; // 10px для учёта ширины ползунка
             }
-            // Инициализация ползунка
-            updateSliderThumb(thumb, swiper);
 
             window.addEventListener("resize", function () {
                 const newIsMobile = window.innerWidth <= 766;
