@@ -420,8 +420,8 @@
         <script type="module">
             import Swiper from "swiper";
 
-            const isMobile = window.innerWidth <= 766;
-            const isTablet = window.innerWidth > 766 && window.innerWidth <= 992;
+            const isMobile = window.innerWidth <= 767;
+            const isTablet = window.innerWidth > 767 && window.innerWidth <= 992;
             const desktop = window.innerWidth > 992;
             const thumb = document.querySelector(".slider-thumb");
             const track = document.querySelector(".slider-track");
@@ -446,14 +446,14 @@
             function showBtn() {
                 // Функция для проверки мобильного устройства
                 function checkIsMobile() {
-                    if (window.innerWidth <= 766) {
+                    if (window.innerWidth <= 767) {
                         menuBtn.classList.add("mobile");
                     } else {
                         menuBtn.classList.remove("mobile");
                     }
                 }
                 function checkIsTable() {
-                    if (window.innerWidth > 766) {
+                    if (window.innerWidth > 767) {
                         menuBtn2.classList.add("mobile");
                     } else {
                         menuBtn2.classList.remove("mobile");
