@@ -38,6 +38,12 @@
         background-color: white;
     }
 
+    &--bg {
+        &:hover {
+            background-color: #a4423a;
+        }
+    }
+
     background-color: #f74435;
 }
 .burger {
@@ -985,10 +991,8 @@ slider-thumbGallery {
         width: 100%;
         padding: 40px 104px;
         background-color: white;
-        @media (max-width: 574px) {
-            padding: 27px 30px;
-        }
-        @media (min-width: 575px) and (max-width: 767px) {
+
+        @media (max-width: 767px) {
             padding: 27px 30px;
         }
     }
