@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="/scss/index.scss" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
         <style>
             .displayNone {
                 display: none;
@@ -41,8 +42,22 @@
                     </div>
                 </div>
                 <div class="header__right">
-                    <img src="/eye.svg" alt="" />
-                    <button class="btn btn-dark btn--clipRightB">
+                    <svg
+                        class="header__eye"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="13"
+                        viewBox="0 0 24 13"
+                        fill="none">
+                        <path
+                            d="M23.5877 5.97663C23.5392 5.91527 22.3764 4.45649 20.3827 2.99184C17.7187 1.03456 14.82 0 11.9999 0C9.17999 0 6.28126 1.03456 3.61711 2.99184C1.62354 4.45644 0.460671 5.91527 0.412176 5.97663L0 6.49793L0.412229 7.01929C0.460723 7.08065 1.62359 8.53948 3.61717 10.0041C6.28131 11.9614 9.18005 12.9959 12 12.9959C14.82 12.9959 17.7187 11.9614 20.3827 10.0041C22.3764 8.53948 23.5392 7.08065 23.5877 7.01929L24 6.49793L23.5877 5.97663ZM11.9999 11.0501C9.48988 11.0501 7.44775 9.00803 7.44775 6.49793C7.44775 6.10467 7.49788 5.72292 7.59208 5.35866L6.55279 5.18375C6.45096 5.60538 6.39695 6.04546 6.39695 6.49793C6.39695 8.11932 7.08953 9.58182 8.19403 10.6059C6.77224 10.0807 5.56325 9.34371 4.65079 8.67719C3.52034 7.85152 2.67313 7.01645 2.19013 6.49793C2.67334 5.97926 3.52044 5.14429 4.65079 4.31868C5.56325 3.65216 6.7723 2.91518 8.19403 2.38994L8.89124 3.17583C9.7055 2.41337 10.7991 1.94577 11.9999 1.94577C14.51 1.94577 16.552 3.98784 16.552 6.49793C16.552 9.00803 14.51 11.0501 11.9999 11.0501ZM19.3491 8.67719C18.4365 9.34371 17.2275 10.0807 15.8058 10.6059C16.9103 9.58187 17.6028 8.11937 17.6028 6.49788C17.6028 4.87639 16.9103 3.41394 15.8058 2.38989C17.2276 2.91513 18.4365 3.65211 19.3491 4.31863C20.4795 5.14429 21.3267 5.97936 21.8097 6.49783C21.3265 7.01661 20.4794 7.85163 19.3491 8.67719Z"
+                            fill="black" />
+                        <path
+                            d="M9.1034 5.61306C9.01797 5.89305 8.97168 6.19006 8.97168 6.49799C8.97168 8.17055 10.3276 9.52651 12.0002 9.52651C13.6727 9.52651 15.0286 8.1706 15.0286 6.49799C15.0286 4.82538 13.6727 3.46948 12.0002 3.46948C11.1855 3.46948 10.4465 3.79176 9.90216 4.31506L11.396 5.99886L9.1034 5.61306Z"
+                            fill="black" />
+                    </svg>
+
+                    <button class="btn btn-dark btn--active btn--clipRightB btn--bg">
                         <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M13.3077 13.3077L17 17M15.7692 8.38462C15.7692 12.463 12.463 15.7692 8.38462 15.7692C4.3062 15.7692 1 12.463 1 8.38462C1 4.3062 4.3062 1 8.38462 1C12.463 1 15.7692 4.3062 15.7692 8.38462Z"
@@ -57,7 +72,7 @@
             <section class="menu">
                 <div class="container menu__container">
                     <div class="menu__btns">
-                        <button id="menu-btn2" class="btn menu-btn menu__btn menu__btn-burger menu__btn--clipLeftB">
+                        <button id="menu-btn2" class="btn menu-btn menu__btn menu__btn-burger btn--clipLeftB">
                             <div class="burger">
                                 <span></span>
                                 <span></span>
@@ -68,6 +83,7 @@
                             <button class="btn btn-dark menu__btn--active btn--clipRightT">АОДНТ</button>
                             <button class="btn btn-dark menu__btn btn--clipLeftT">
                                 <svg
+                                    class="menu__btn--text"
                                     width="44"
                                     height="26"
                                     viewBox="0 0 44 26"
@@ -82,7 +98,7 @@
                     </div>
                     <div class="menu__links">
                         <ul class="menu__list">
-                            <li id="menu" class="menu__item">
+                            <li id="menu" class="menu__item menu__item--active">
                                 СОБЫТИЯ
 
                                 <svg
@@ -202,6 +218,24 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="afisha__card">
+                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <div class="afisha__card--top">
+                                        <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
+                                            направление
+                                        </button>
+                                        <p class="afisha__card--title">Название события</p>
+                                    </div>
+                                    <img class="afisha__card--img" src="/cart2.png" alt="" />
+                                    <div class="afisha__card--btns">
+                                        <button class="btn btn--active btn-dark btn--clipRightT">Подробнее</button>
+                                        <button class="btn btn--clipLeftT btn--bg">
+                                            <img src="/click.svg" alt="" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                             <div id="swiperBlack" class="swiper-slide">
                                 <div class="afisha__card afisha__card--active" style="height: 100%">
                                     <button
@@ -214,18 +248,18 @@
                                     <div class="afisha__card--date">
                                         <button class="btn btn--white btn-dark btn--clipRightT">26.01.2021</button>
                                         <div class="afisha__card--group">
-                                            <button class="btn btn--clipRightT btn-dark">16:00</button>
-                                            <button class="btn btn--active">18:00</button>
-                                            <button class="btn btn--active">16:00</button>
-                                            <button class="btn btn--active">18:00</button>
+                                            <button class="as btn btn--clipRightT btn-dark btn--border">16:00</button>
+                                            <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                            <button class="as btn--clipRightT btn btn--active">16:00</button>
+                                            <button class="as btn--clipRightT btn btn--active">18:00</button>
                                         </div>
                                     </div>
                                     <div class="afisha__card--date">
                                         <button class="btn btn--white btn--clipRightT btn-dark">26.01.2021</button>
                                         <div class="afisha__card--group">
-                                            <button class="btn btn--active">18:00</button>
-                                            <button class="btn btn--active">16:00</button>
-                                            <button class="btn btn--active">18:00</button>
+                                            <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                            <button class="as btn--clipRightT btn btn--active">16:00</button>
+                                            <button class="as btn--clipRightT btn btn--active">18:00</button>
                                         </div>
                                     </div>
                                 </div>
@@ -243,6 +277,78 @@
                                     <div class="afisha__card--btns">
                                         <button class="btn btn--active btn-dark btn--clipRightT">Подробнее</button>
                                         <button class="btn btn--clipLeftT btn--bg">
+                                            <img src="/click.svg" alt="" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="afisha__card">
+                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <div class="afisha__card--top">
+                                        <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
+                                            направление
+                                        </button>
+                                        <p class="afisha__card--title">Название события</p>
+                                    </div>
+                                    <img class="afisha__card--img" src="/cart2.png" alt="" />
+                                    <div class="afisha__card--btns">
+                                        <button class="btn btn--active btn-dark btn--clipRightT">Подробнее</button>
+                                        <button class="btn btn--clipLeftT btn--bg">
+                                            <img src="/click.svg" alt="" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="afisha__card">
+                                    <button class="btn btn--age afisha__card--absolute">6+</button>
+                                    <div class="afisha__card--top">
+                                        <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
+                                            направление
+                                        </button>
+                                        <p class="afisha__card--title">Название события</p>
+                                    </div>
+                                    <img class="afisha__card--img" src="/cart2.png" alt="" />
+                                    <div class="afisha__card--btns">
+                                        <button class="btn btn--active btn-dark btn--clipRightT">Подробнее</button>
+                                        <button class="btn btn--clipLeftT">
+                                            <img src="/click.svg" alt="" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="afisha__card">
+                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <div class="afisha__card--top">
+                                        <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
+                                            направление
+                                        </button>
+                                        <p class="afisha__card--title">Название события</p>
+                                    </div>
+                                    <img class="afisha__card--img" src="/cart2.png" alt="" />
+                                    <div class="afisha__card--btns">
+                                        <button class="btn btn--active btn-dark btn--clipRightT">Подробнее</button>
+                                        <button class="btn btn--clipLeftT btn--bg">
+                                            <img src="/click.svg" alt="" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="afisha__card">
+                                    <button class="btn btn--age afisha__card--absolute">6+</button>
+                                    <div class="afisha__card--top">
+                                        <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
+                                            направление
+                                        </button>
+                                        <p class="afisha__card--title">Название события</p>
+                                    </div>
+                                    <img class="afisha__card--img" src="/cart2.png" alt="" />
+                                    <div class="afisha__card--btns">
+                                        <button class="btn btn--active btn-dark btn--clipRightT">Подробнее</button>
+                                        <button class="btn btn--clipLeftT">
                                             <img src="/click.svg" alt="" />
                                         </button>
                                     </div>
@@ -306,7 +412,7 @@
                     <div class="swiper news-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="news__card">
+                                <div class="news__card news__card--disable">
                                     <b class="news__card--date">18.01.2021</b>
                                     <p class="news__card--text">
                                         14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
@@ -322,7 +428,7 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="news__card">
+                                <div class="news__card news__card--disable">
                                     <b class="news__card--date">18.01.2021</b>
                                     <p class="news__card--text">
                                         14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
@@ -330,7 +436,55 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="news__card">
+                                <div class="news__card news__card--disable">
+                                    <b class="news__card--date">18.01.2021</b>
+                                    <p class="news__card--text">
+                                        14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news__card news__card--disable">
+                                    <b class="news__card--date">18.01.2021</b>
+                                    <p class="news__card--text">
+                                        14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news__card news__card--disable">
+                                    <b class="news__card--date">18.01.2021</b>
+                                    <p class="news__card--text">
+                                        14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news__card news__card--disable">
+                                    <b class="news__card--date">18.01.2021</b>
+                                    <p class="news__card--text">
+                                        14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news__card news__card--disable">
+                                    <b class="news__card--date">18.01.2021</b>
+                                    <p class="news__card--text">
+                                        14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news__card news__card--disable">
+                                    <b class="news__card--date">18.01.2021</b>
+                                    <p class="news__card--text">
+                                        14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="news__card news__card--disable">
                                     <b class="news__card--date">18.01.2021</b>
                                     <p class="news__card--text">
                                         14 января в Приамурье стартует Всероссийская акция «Онлайн-колядки»
@@ -339,8 +493,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slider-trackNews">
-                        <div class="slider-thumbNews"></div>
+
+                    <div class="slider-trackNews slider-trackNews--news">
+                        <div class="slider-thumbNews" style="left: 0px"></div>
                     </div>
                 </div>
             </section>
@@ -375,6 +530,18 @@
                             <div class="swiper-slide">
                                 <img class="gallery__img" src="/MaskGroup5.png" alt="" />
                             </div>
+                            <div class="swiper-slide">
+                                <img class="gallery__img" src="/MaskGroup4.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="gallery__img" src="/MaskGroup5.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="gallery__img" src="/MaskGroup4.png" alt="" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="gallery__img" src="/MaskGroup5.png" alt="" />
+                            </div>
                         </div>
                     </div>
                     <div class="slider-trackGallery">
@@ -384,24 +551,28 @@
             </section>
 
             <section class="projects">
-                <div class="container projects__container">
-                    <div class="projects__cards">
-                        <div class="projects__card">
-                            <img src="/image1.png" alt="" />
+                <div class="swiper projects-swiper container projects__container">
+                    <div class="swiper-wrapper projects__cards">
+                        <div class="swiper-slide projects__card">
+                            <img src=" /image1.png" alt="" />
                         </div>
-                        <div class="projects__card">
+                        <div class="swiper-slide projects__card">
                             <img src="/image2.png" alt="" />
                         </div>
-                        <div class="projects__card">
+                        <div class="swiper-slide projects__card">
                             <img src="/image3.png" alt="" />
                         </div>
-                        <div class="projects__card">
+                        <div class="swiper-slide projects__card">
                             <img src="/image4.png" alt="" />
                         </div>
+                        <div class="swiper-slide projects__card">
+                            <img src="/image3.png" alt="" />
+                        </div>
                     </div>
+
                     <div class="projects__btns">
-                        <img src="/arrowLeft.svg" alt="" />
-                        <img src="/arrowRight.svg" alt="" />
+                        <img class="project--prev" src="/arrowLeft.svg" alt="" />
+                        <img class="project--next" src="/arrowRight.svg" alt="" />
                     </div>
                 </div>
             </section>
@@ -418,30 +589,14 @@
         </footer>
 
         <script type="module">
-            import Swiper from "swiper";
-
-            const isMobile = window.innerWidth <= 767;
-            const isTablet = window.innerWidth > 767 && window.innerWidth <= 992;
+            const isMobile = window.innerWidth < 768;
+            const isTablet = window.innerWidth >= 766 && window.innerWidth <= 992;
             const desktop = window.innerWidth > 992;
-            const thumb = document.querySelector(".slider-thumb");
-            const track = document.querySelector(".slider-track");
-            const trackNews = document.querySelector(".slider-trackNews");
-            const thumbNews = document.querySelector(".slider-thumbNews");
+
             const menuBtn = document.getElementById("menu-btn");
             const menuBtn2 = document.getElementById("menu-btn2");
             const swiperBlack = document.getElementById("swiperBlack");
             const newsBlock = document.getElementById("newsBlock");
-
-            const menu = document.getElementById("menu");
-            // Добавляем класс при наведении
-            menu.addEventListener("mouseover", () => {
-                menu.classList.add("active");
-            });
-
-            // Убираем класс, когда мышь уходит
-            menu.addEventListener("mouseout", () => {
-                menu.classList.remove("active");
-            });
 
             function showBtn() {
                 // Функция для проверки мобильного устройства
@@ -484,45 +639,20 @@
             }
             showBtn();
 
-            const swiper = new Swiper(".afisha-swiper", {
-                slidesPerView: isTablet ? 3 : isMobile ? 1 : 4,
-                spaceBetween: 20,
-                loop: false,
-
-                pagination: {
-                    el: ".slider-track",
-                    type: "progressbar",
-                },
-            });
-            // Обработчик события слайдера
-            swiper.on("slideChange", function () {
-                updateSliderThumb(thumb, swiper);
+            const menu = document.getElementById("menu");
+            // Добавляем класс при наведении
+            menu.addEventListener("mouseover", () => {
+                menu.classList.add("active");
             });
 
-            const swiperNews = new Swiper(".news-swiper", {
-                slidesPerView: isTablet ? 3 : isMobile ? 1 : 4,
-                spaceBetween: 20,
-                loop: false,
+            // Убираем класс, когда мышь уходит
+            menu.addEventListener("mouseout", () => {
+                menu.classList.remove("active");
             });
-
-            const swiperGallery = new Swiper(".gallery-swiper", {
-                slidesPerView: isTablet ? 3 : isMobile ? 2 : 4,
-                spaceBetween: 20,
-                loop: false,
-            });
-
-            // Функция для обновления позиции ползунка
-            function updateSliderThumb(target, swiperEl) {
-                console.log("swiperEl: ", swiperEl);
-                const totalSlides = swiperEl.slides.length;
-                const currentSlide = swiperEl.realIndex;
-                const progress = (currentSlide / (totalSlides - 1)) * 100;
-                target.style.left = `calc(${progress}% - 10px)`; // 10px для учёта ширины ползунка
-            }
 
             window.addEventListener("resize", function () {
-                const newIsMobile = window.innerWidth <= 766;
-                const newIsTablet = window.innerWidth > 766 && window.innerWidth <= 992;
+                const newIsMobile = window.innerWidth <= 768;
+                const newIsTablet = window.innerWidth > 768 && window.innerWidth <= 992;
                 if (newIsMobile !== isMobile) {
                     // Перезагружает страницу.
                     window.location.reload();
@@ -533,5 +663,6 @@
                 }
             });
         </script>
+        <script type="module" src="./script/swiper.js"></script>
     </body>
 </html>
