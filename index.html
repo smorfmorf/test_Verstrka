@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="/scss/index.scss" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" /> -->
         <style>
             .displayNone {
                 display: none;
@@ -202,7 +202,9 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="afisha__card">
-                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <button class="btn btn--age btn-dark afisha__card--absolute btn--clipLeftB">
+                                        6+
+                                    </button>
                                     <div class="afisha__card--top">
                                         <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
                                             направление
@@ -220,7 +222,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="afisha__card">
-                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <button class="btn btn--age btn-dark afisha__card--absolute btn--clipLeftB">
+                                        6+
+                                    </button>
                                     <div class="afisha__card--top">
                                         <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
                                             направление
@@ -266,7 +270,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="afisha__card">
-                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <button class="btn btn--age btn-dark afisha__card--absolute btn--clipLeftB">
+                                        6+
+                                    </button>
                                     <div class="afisha__card--top">
                                         <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
                                             направление
@@ -284,7 +290,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="afisha__card">
-                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <button class="btn btn--age btn-dark afisha__card--absolute btn--clipLeftB">
+                                        6+
+                                    </button>
                                     <div class="afisha__card--top">
                                         <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
                                             направление
@@ -302,7 +310,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="afisha__card">
-                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <button class="btn btn--age btn-dark afisha__card--absolute btn--clipLeftB">
+                                        6+
+                                    </button>
                                     <div class="afisha__card--top">
                                         <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
                                             направление
@@ -320,7 +330,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="afisha__card">
-                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <button class="btn btn--age btn-dark afisha__card--absolute btn--clipLeftB">
+                                        6+
+                                    </button>
                                     <div class="afisha__card--top">
                                         <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
                                             направление
@@ -338,7 +350,9 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="afisha__card">
-                                    <button class="btn btn--age btn-dark afisha__card--absolute">6+</button>
+                                    <button class="btn btn--age btn-dark afisha__card--absolute btn--clipLeftB">
+                                        6+
+                                    </button>
                                     <div class="afisha__card--top">
                                         <button class="btn afisha__card--btn btn-dark btn--active btn--clipRightT">
                                             направление
@@ -517,28 +531,34 @@
             </section>
 
             <section class="projects">
-                <div class="swiper projects-swiper container projects__container">
-                    <div class="swiper-wrapper projects__cards">
-                        <div class="swiper-slide projects__card">
-                            <img src=" /image1.png" alt="" />
+                <div class="container projects__container">
+                    <div style="position: relative">
+                        <div class="swiper projects-swiper">
+                            <div class="swiper-wrapper projects__cards">
+                                <div class="swiper-slide projects__card">
+                                    <img src=" /image1.png" alt="" />
+                                </div>
+                                <div class="swiper-slide projects__card">
+                                    <img src="/image2.png" alt="" />
+                                </div>
+                                <div class="swiper-slide projects__card">
+                                    <img src="/image3.png" alt="" />
+                                </div>
+                                <div class="swiper-slide projects__card">
+                                    <img src="/image4.png" alt="" />
+                                </div>
+                                <div class="swiper-slide projects__card">
+                                    <img src="/image3.png" alt="" />
+                                </div>
+                                <div class="swiper-slide projects__card">
+                                    <img src="/image1.png" alt="" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="swiper-slide projects__card">
-                            <img src="/image2.png" alt="" />
+                        <div class="projects__btns">
+                            <img class="project--prev" src="/arrowLeft.svg" alt="" />
+                            <img class="project--next" src="/arrowRight.svg" alt="" />
                         </div>
-                        <div class="swiper-slide projects__card">
-                            <img src="/image3.png" alt="" />
-                        </div>
-                        <div class="swiper-slide projects__card">
-                            <img src="/image4.png" alt="" />
-                        </div>
-                        <div class="swiper-slide projects__card">
-                            <img src="/image3.png" alt="" />
-                        </div>
-                    </div>
-
-                    <div class="projects__btns">
-                        <img class="project--prev" src="/arrowLeft.svg" alt="" />
-                        <img class="project--next" src="/arrowRight.svg" alt="" />
                     </div>
                 </div>
             </section>

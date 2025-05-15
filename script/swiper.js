@@ -105,8 +105,8 @@ const swiperGallery = new Swiper(".gallery-swiper", {
 
 const swiperProjects = new Swiper(".projects-swiper", {
   modules: [Navigation, Grid],
-  slidesPerView: isTablet ? 2 : isMobile ? 2 : 4,
-  spaceBetween: 0,
+  slidesPerView: isTablet ? 2 : 4,
+  // spaceBetween: 0,
 
   grid: {
     rows: 1,
