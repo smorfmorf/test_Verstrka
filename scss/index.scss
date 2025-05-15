@@ -184,7 +184,7 @@
 }
 
 .menu {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 
     @media (max-width: 767px) {
         margin-bottom: 20px;
@@ -323,9 +323,9 @@
 
 .content {
     position: relative;
-    margin-bottom: 67px;
+    margin-bottom: 65px;
 
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         margin-bottom: 40px;
     }
     &__container {
@@ -342,6 +342,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            gap: 25px;
         }
     }
 
@@ -459,6 +460,7 @@
         margin-bottom: 40px;
         @media (max-width: 767px) {
             justify-content: center;
+            margin-bottom: 0px;
         }
     }
 
@@ -480,7 +482,7 @@
 .slider-trackGallery {
     width: 100%;
     height: 5px;
-    background: #4f4f4f;
+    background: #e0e0e0;
     position: relative;
     margin-top: 20px;
     border-radius: 5px;
@@ -491,6 +493,7 @@
         right: 13px;
         height: 360px;
         width: 3px;
+        background: #4f4f4f;
     }
 }
 
@@ -527,10 +530,10 @@
     );
 }
 .afisha {
-    margin-bottom: 77px;
+    margin-bottom: 90px;
     // для планшетов
     @media (min-width: 768px) and (max-width: 1023px) {
-        margin-bottom: 48px;
+        margin-bottom: 54px;
     }
     @media (max-width: 767px) {
         margin-bottom: 40px;
@@ -723,12 +726,18 @@
     }
 }
 .card-swiper {
-    width: 100%;
     .swiper-slide {
         height: auto !important;
     }
 }
 .news {
+    margin-bottom: 67px;
+    background-color: #dfdede66;
+
+    @media (max-width: 768px) {
+        margin-bottom: 42px;
+    }
+
     // для телефонов
     @media (max-width: 767px) {
         .swiper-slide {
@@ -743,47 +752,21 @@
         }
     }
 
-    margin-bottom: 96px;
-
     @media (max-width: 767px) {
         margin-bottom: 40px;
     }
-    // &__cards {swiper
-    //     display: grid;
-    //     grid-template-columns: repeat(4, minmax(0, 1fr));
-    //     gap: 30px;
-    // }
-
-    // @media (max-width: 992px) {
-    //     margin-bottom: 40px;
-    //     &__cards {
-    //         display: flex;
-    //         gap: 20px;
-    //         overflow-x: auto;
-    //         scroll-snap-type: x mandatory; /* для эффекта прилипания */
-    //     }
-    //     &__card {
-    //         padding: 24px;
-    //         min-width: 31%; /* карточка будет почти на всю ширину */
-    //         scroll-snap-align: start; /* карточки будут прилипать при свайпе */
-    //     }
-    //     &__phone {
-    //         opacity: 0%;
-    //         display: none;
-    //     }
-    //     &__title {
-    //         font-size: 24px;
-    //     }
-    // }
 
     .news__container {
         position: relative;
-        background-color: #dfdede66;
-        @media (max-width: 767px) {
-            padding: 30px 10px 20px;
+        padding: 67px 5px 96px;
+
+        @media (max-width: 768px) {
+            padding: 48px 24px 54px;
         }
 
-        padding: 48px 24px 20px;
+        @media (max-width: 425px) {
+            padding: 30px 10px;
+        }
     }
     &__top {
         display: flex;
@@ -848,15 +831,27 @@
                 0% 100%,
                 0% 83%
             );
+
             &::before {
                 content: "";
                 position: absolute;
                 top: -2px;
                 left: -5px;
-                width: 20px;
+                width: 23px;
                 height: 20px;
                 background: #e0e0e0;
                 clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+
+                @media (min-width: 991px) and (max-width: 1200px) {
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    left: -5px;
+                    width: 20px;
+                    height: 19px;
+                    clip-path: polygon(16% 0%, 100% 0%, 0% 100%);
+                    background: #e0e0e0;
+                }
 
                 @media (min-width: 768px) and (max-width: 900px) {
                     width: 20px;
@@ -999,10 +994,9 @@
                     content: "";
                     position: absolute;
                     top: -2px;
-                    left: -6px;
+                    left: -5px;
                     width: 20px;
-                    height: 24px;
-
+                    height: 19px;
                     clip-path: polygon(16% 0%, 100% 0%, 0% 100%);
                     background: #f74435;
                 }
@@ -1068,10 +1062,10 @@
 }
 
 .gallery {
-    margin-bottom: 48px;
+    margin-bottom: 78px;
 
     @media (max-width: 425px) {
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
 
     &__container {
@@ -1139,7 +1133,7 @@
         }
     }
     @media (min-width: 575px) and (max-width: 992px) {
-        margin-bottom: 20px;
+        margin-bottom: 54px;
 
         &__title {
             font-weight: 900;
@@ -1153,15 +1147,15 @@
 }
 
 .projects {
+    background-color: #dfdede66;
     height: 100%;
     &__container {
         position: relative !important;
 
         width: 100% !important;
-        padding: 40px 24px 20px !important;
-        background-color: white;
+        padding: 60px 24px 60px !important;
         @media (max-width: 768px) {
-            padding: 27px 105px !important;
+            padding: 40px 105px !important;
         }
         @media (max-width: 425px) {
             padding: 27px 30px !important;
@@ -1892,4 +1886,13 @@
 .custom-table td:first-child {
     width: 50px;
     font-weight: normal;
+}
+.www::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -3px;
+    width: 18px;
+    height: 23px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
 }
