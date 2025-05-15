@@ -17,9 +17,10 @@
     position: absolute;
     top: 0;
     right: 0;
-    border-top: 9px solid white;
-    border-left: 17px solid transparent;
+    border-top: 7px solid white;
+    border-left: 12px solid transparent;
 }
+
 .btn {
     border-radius: 0px;
     padding: 11px 20px;
@@ -479,15 +480,30 @@
 .slider-trackGallery {
     width: 100%;
     height: 5px;
-    background: #ddd;
+    background: #4f4f4f;
     position: relative;
     margin-top: 20px;
     border-radius: 5px;
+
+    &--about {
+        position: absolute;
+        top: 33px;
+        right: 13px;
+        height: 360px;
+        width: 3px;
+    }
 }
 
 .slider-thumb,
 .slider-thumbNews,
 .slider-thumbGallery {
+    &--about {
+        top: 0;
+        right: -5px;
+        transform: rotate(271deg);
+        background-color: white;
+    }
+
     content: "";
     position: absolute;
     width: 20px;
@@ -528,6 +544,9 @@
     }
 
     &__container {
+        @media (min-width: 1024px) {
+            padding: 0 5px;
+        }
         padding: 0 24px;
     }
 
@@ -639,7 +658,10 @@
         }
 
         &--active {
-            max-width: 270px;
+            height: 100%;
+            max-height: 420px;
+            // overflow: auto;
+            max-width: 400px;
             color: white;
             background-color: #000;
             clip-path: polygon(
@@ -665,6 +687,9 @@
                     color: white;
                     font-weight: 800;
                     font-size: 21px;
+                    @media (max-width: 1100px) {
+                        font-size: 18px;
+                    }
                 }
             }
             .btn {
@@ -683,17 +708,26 @@
                     border: 2px solid white;
                 }
             }
+
             .afisha__card--date {
                 margin-bottom: 32px;
-
-                &:last-of-type {
-                    margin: 0; /* Убирает маргин */
-                }
             }
+        }
+
+        &--about {
+            position: relative;
+
+            overflow: unset;
+            max-height: 450px;
         }
     }
 }
-
+.card-swiper {
+    width: 100%;
+    .swiper-slide {
+        height: auto !important;
+    }
+}
 .news {
     // для телефонов
     @media (max-width: 767px) {
@@ -1491,7 +1525,7 @@
     }
     &__text {
         width: 100%;
-        max-width: 410px;
+        max-width: 700px;
     }
     b {
         color: white;

@@ -10,16 +10,19 @@ const thumbGallery = document.querySelector(".slider-thumbGallery");
 const trackGallery = document.querySelector(".slider-trackGallery");
 const thumbGallery2 = document.querySelector(".slider-thumbGallery2");
 const trackGallery2 = document.querySelector(".slider-trackGallery2");
+const trackAbout = document.querySelector('.slider-track--about')
+const thumbAbout = document.querySelector('.slider-thumb--about')
 
 
 
 let maxLeftGallery = trackGallery.clientWidth - thumbGallery.clientWidth;
 let maxLeftGallery2 = trackGallery2.clientWidth - thumbGallery2.clientWidth;
+let maxTopAbout = trackAbout.clientHeight - thumbAbout.clientHeight;
 
 window.addEventListener("resize", function () {
   maxLeftGallery = trackGallery.clientWidth - thumbGallery.clientWidth;
   maxLeftGallery2 = trackGallery2.clientWidth - thumbGallery2.clientWidth;
-
+  maxTopAbout = trackAbout.clientHeight - thumbAbout.clientHeight;
 });
 
 // при перемещении ползунка, для обновления swiper
@@ -54,6 +57,8 @@ function dragThumb(thumb, track, swiperContainer, maxLeft) {
 }
 
 
+
+
 const swiperGallery = new Swiper(".gallery-swiper", {
 
   slidesPerView: isTablet ? 2 : isMobile ? 2 : 4,
@@ -85,6 +90,67 @@ const swiperGallery2 = new Swiper(".gallery-swiper2", {
 
 });
 
+const swiperProjects = new Swiper(".projects-swiper2", {
+  modules: [Navigation, Grid],
+  slidesPerView: isTablet ? 2 : 4,
+  // spaceBetween: 0,
+
+  grid: {
+    rows: 1,
+    fill: "row",
+  },
+  loop: false,
+  navigation: {
+    nextEl: ".project--next",
+    prevEl: ".project--prev",
+  },
+
+
+
+});
+
+const swiperAfishaList = new Swiper(".card-swiper", {
+  loop: false,
+  slidesPerView: 2,
+  spaceBetween: 0,
+  direction: "vertical",
+  on: {
+    progress(swiper, progress) {
+      thumbAbout.style.top = `${progress * maxTopAbout}px`;
+    },
+  },
+});
 
 dragThumb(thumbGallery, trackGallery, swiperGallery, maxLeftGallery);
 dragThumb(thumbGallery2, trackGallery2, swiperGallery2, maxLeftGallery2);
+
+
+
+function dragThumbVertical(thumb, track, swiperContainer, maxTop) {
+  thumb.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    const shiftY = e.clientY - thumb.getBoundingClientRect().top;
+    const scrollbarTop = track.getBoundingClientRect().top;
+
+    function onMouseMove(e) {
+      let newTop = e.clientY - scrollbarTop - shiftY;
+      newTop = Math.max(0, Math.min(newTop, maxTop));
+      thumb.style.top = `${newTop}px`;
+      const percent = newTop / maxTop;
+      handleThumbMove(percent, swiperContainer);
+    }
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener(
+      "mouseup",
+      () => {
+        document.removeEventListener("mousemove", onMouseMove);
+      },
+      { once: true }
+    );
+  });
+}
+
+
+
+dragThumbVertical(thumbAbout, trackAbout, swiperAfishaList, maxTopAbout);

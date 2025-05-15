@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="/scss/index.scss" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     </head>
     <body>
         <header class="header">
@@ -263,29 +262,55 @@
                                 </div>
                             </div>
 
-                            <div class="afisha__card afisha__card--active" style="height: 100%">
+                            <div class="afisha__card afisha__card--active afisha__card--about">
                                 <button class="btn btn--age btn--white btn-dark afisha__card--absolute btn--clipLeftB">
                                     <img width="14" height="14" src="/close.svg" alt="" />
                                 </button>
                                 <div class="afisha__card--top">
                                     <p class="afisha__card--title">К/ф «Маленькие волшебницы»</p>
                                 </div>
-                                <div class="afisha__card--date">
-                                    <button class="btn btn--white btn-dark btn--clipRightT">26.01.2021</button>
-                                    <div class="afisha__card--group">
-                                        <button class="as btn btn--clipRightT btn-dark btn--border">16:00</button>
-                                        <button class="as btn--clipRightT btn btn--active">18:00</button>
-                                        <button class="as btn--clipRightT btn btn--active">16:00</button>
-                                        <button class="as btn--clipRightT btn btn--active">18:00</button>
+
+                                <div class="swiper card-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide afisha__card--date">
+                                            <button class="btn btn--white btn-dark btn--clipRightT">26.01.2021</button>
+                                            <div class="afisha__card--group">
+                                                <button class="as btn btn--clipRightT btn-dark btn--border">
+                                                    16:00
+                                                </button>
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">16:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide afisha__card--date">
+                                            <button class="btn btn--white btn--clipRightT btn-dark">26.01.2021</button>
+                                            <div class="afisha__card--group">
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">16:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide afisha__card--date">
+                                            <button class="btn btn--white btn--clipRightT btn-dark">26.01.2021</button>
+                                            <div class="afisha__card--group">
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">16:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide afisha__card--date">
+                                            <button class="btn btn--white btn--clipRightT btn-dark">26.01.2021</button>
+                                            <div class="afisha__card--group">
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">16:00</button>
+                                                <button class="as btn--clipRightT btn btn--active">18:00</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="afisha__card--date">
-                                    <button class="btn btn--white btn--clipRightT btn-dark">26.01.2021</button>
-                                    <div class="afisha__card--group">
-                                        <button class="as btn--clipRightT btn btn--active">18:00</button>
-                                        <button class="as btn--clipRightT btn btn--active">16:00</button>
-                                        <button class="as btn--clipRightT btn btn--active">18:00</button>
-                                    </div>
+                                <div class="slider-track slider-track--about">
+                                    <div class="slider-thumb slider-thumb--about"></div>
                                 </div>
                             </div>
                         </div>
@@ -737,7 +762,7 @@
             <section class="projects">
                 <div class="container projects__container">
                     <div style="position: relative">
-                        <div class="swiper projects-swiper">
+                        <div class="swiper projects-swiper2">
                             <div class="swiper-wrapper projects__cards">
                                 <div class="swiper-slide projects__card">
                                     <img src=" /image1.png" alt="" />
