@@ -2,6 +2,8 @@
 @import "normalize";
 @import "swiper/scss";
 @import "swiper/css/navigation";
+@import "tailwindcss";
+
 .container {
     max-width: clamp(320px, 100vw, 1170px) !important;
     margin-left: auto;
