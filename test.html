@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form id="myForm">
+            <input type="text" name="username" />
+            <input type="password" name="password" />
+            <button type="submit">Отправить</button>
+        </form>
+
+        <form action="/submit" method="GET">
+            <input name="username" value="anna" />
+            <input name="email" value="test@mail.com" />
+            <button>Send</button>
+        </form>
+
+        <script>
+            const form = document.getElementById("myForm");
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault(); // остановить стандартную отправку
+
+                const formData = new FormData(form);
+
+                const data = {};
+
+                // Преобразование FormData в объект
+                formData.forEach((value, key) => {
+                    console.log("value: ", value);
+                    console.log("key: ", key);
+
+                    data[key] = value;
+                });
+
+                // console.log([...formData.entries()]);
+                // const data = Object.fromEntries(formData.entries());
+                // console.log("data: ", data);
+
+                // const response = await fetch("/submit", {
+                //     method: "POST",
+                //     headers: { "Content-Type": "application/json" },
+                //     body: JSON.stringify(data),
+                // });
+
+                // const result = await response.json();
+                // console.log(result);
+            });
+        </script>
+    </body>
+</html>
